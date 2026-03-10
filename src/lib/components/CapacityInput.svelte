@@ -71,11 +71,12 @@
     align-items: center;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     border-radius: 50px;
     padding: 6px 18px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--glass-shadow);
   }
 
   .glass-input-group:focus-within {
@@ -123,6 +124,7 @@
 
   .custom-select {
     appearance: none;
+    -webkit-appearance: none;
     border: none;
     background: transparent;
     padding: 8px 30px 8px 10px;
@@ -130,6 +132,12 @@
     font-size: 1rem;
     outline: none;
     cursor: pointer;
+    color: var(--color-text-main);
+  }
+
+  /* FIX: Ensure dropdown options have a solid, themed background */
+  .custom-select option {
+    background-color: var(--input-bg);
     color: var(--color-text-main);
   }
 

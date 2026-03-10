@@ -7,26 +7,26 @@
   
   /* Light Mode */
   --primary-bg: #fdfaf9;
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.8);
-  --glass-shadow: 0 8px 32px 0 rgba(195, 88, 49, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(195, 88, 49, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(195, 88, 49, 0.08);
   --color-text-main: #2d2d2d;
   --color-text-muted: #666;
-  --input-bg: rgba(255, 255, 255, 0.9);
+  --input-bg: #ffffff; /* Solid white for options in light mode */
   --blob-color-1: #ffedd5;
   --blob-color-2: #fee2e2;
 }
 
 [data-bs-theme="dark"] {
-  --primary-bg: #121212;
+  --primary-bg: #0f0f0f;
   --glass-bg: rgba(30, 30, 30, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   --color-text-main: #f1f5f9;
   --color-text-muted: #94a3b8;
-  --input-bg: rgba(45, 45, 45, 0.8);
+  --input-bg: #1e1e1e; /* Solid dark for options in dark mode */
   --blob-color-1: #2a1a15;
-  --blob-color-2: #1e1e1e;
+  --blob-color-2: #141414;
 }
 
 body {
@@ -74,6 +74,7 @@ body::after { background: var(--blob-color-2); bottom: -10%; right: -10%; animat
   border-radius: 30px;
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
